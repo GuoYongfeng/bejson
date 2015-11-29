@@ -1,0 +1,20 @@
+{
+  "name": "bejson",
+  "version": "0.0.1",
+  "description": "bejson",
+  "keywords": [
+    "bejson"
+  ],
+  "authors": [
+    "GuoYongfeng"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendors",
+    "test",
+    "tests"
+  ]
+}
