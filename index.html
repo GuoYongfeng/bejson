@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+		<title>格式化工具</title>
+		<link rel="stylesheet" href="./static/css/index.css">
+		<script src="http://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+		<link href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+		<script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="aw-container-wrap">
+		<div class="container">
+		<div class="row">
+		<div class="aw-content-wrap clearfix">
+		<div class=" aw-main-content" style="min-height:700px;max-height:2000px">
+		<nav class="navbar navbar-default">
+		<div class="container-fluid">
+		<ul class="nav navbar-nav" style="width: 100%;">
+		<li class="dropdown">
+		<a href="#" class="dropdown-toggle" id="jsontools" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">JSON相关<span class="caret"></span></a>
+		<ul class="dropdown-menu">
+		<li><a href="/">格式化校验</a>
+		</li>
+		<li><a href="/jsonviewernew/" target="_blank">JSON视图</a>
+		</li>
+		<li><a href="/zhuanyi/">JSON压缩转义</a>
+		</li>
+		<li><a href="/json2javapojo/">JSON生成POJO(实体类)</a>
+		</li>
+		<li><a href="/jsoneditoronline/">JSON在线编辑器</a>
+		</li>
+		<li><a href="/color/">JSON着色</a></li>
+		<li><a href="/xml2json/">XML-JSON互转</a></li>
+		<li><a href="/jsontools/json2get/" id="json2get">JSON和GET请求字符串互转</a></li>
+		<li><a href="/json/col2json/" id="excel2json">Excel转Json</a></li>
+		</ul>
+		</li>
+		<li class="dropdown">
+		<a href="#" id="encTools" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+		编码/加密<span class="caret"></span></a>
+		<ul class="dropdown-menu">
+		<li><a href="/enc/base64/">Base64编码、解码</a></li>
+		<li><a href="/enc/md5/">MD5加密</a></li>
+		<li><a href="/enc/sha/">SHA加密</a></li>
+		<li><a href="/enc/escape/">Escape编码</a></li>
+		<li><a href="/enc/urlencode/" id="urlEncode">URL编码</a></li>
+		<li><a href="/enc/eval_package/">Javascript Eval加密解密</a></li>
+		</ul>
+		</li>
+		<li class="dropdown">
+		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">格式化工具<span class="caret"></span></a>
+		<ul class="dropdown-menu">
+		<li><a href="/jshtml_format/">Javascript/HTML压缩、格式化</a></li>
+		<li><a href="/otherformat/css/">CSS压缩、格式化</a></li>
+		<li><a href="/otherformat/xml/">XML压缩、格式化</a></li>
+		<li><a href="/otherformat/sql/">SQL压缩、格式化</a></li>
+		</ul>
+		</li>
+		<li class="dropdown">
+		<a href="#" id="httputil" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+		网络工具<span class="caret"></span></a>
+		<ul class="dropdown-menu">
+		<li><a href="/httppost/" target="_blank">在线模拟发送HTTP请求</a></li>
+		<li><a id="http2" href="/httputil/httppost2/">支持返回结果的HTTP请求</a></li>
+		<li><a href="/httputil/getip/">获取你的IP</a></li>
+		<li><a href="/httputil/clientinfo/" id="clientinfo">获取您的浏览器信息</a></li>
+		</ul>
+		</li>
+		<li class="dropdown">
+		<a href="#" id="uitools" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+		前端工具<span class="caret"></span></a>
+		<ul class="dropdown-menu">
+		<li><a href="http://runjs.cn/code" target="_blank" rel="external nofollow" id="runjs">RunJS在线编辑器</a></li>
+		<li><a href="/ui/ueditor/" id="ueditor">ueditor在线代码编辑器</a></li>
+		<li><a href="/ui/getcolor/">在线调色板</a></li>
+		<li><a href="/ui/safecolor/" id="safecolor">WEB安全色</a></li>
+		<li><a href="/ui/image2base64/" id="img2base64">在线图片转Base64编码</a></li>
+		<li><a href="/ui/imageresize/" id="imgResize">在线图片大小缩放</a></li>
+		<li><a href="/ui/phonesize/" id="phonesize">iPhone/iPad/Android UI尺寸规范</a></li>
+		<li><a href="http://iconfont.cn/repositories" target="_blank" rel="external nofollow">阿里巴巴矢量图标库</a></li>
+		</ul>
+		</li>
+		<li class="dropdown">
+		<a href="#" id="convertTools" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+		转换工具<span class="caret"></span></a>
+		<ul class="dropdown-menu">
+		<li><a id="unicodechinese" href="/convert/unicode_chinese/">unicode中文互转</a></li>
+		<li><a href="/convert/shorturl/" id="shorturl">在线短地址转换</a></li>
+		<li><a href="/convert/unix/">Unix时间转换</a></li>
+		<li><a href="/convert/jinzhi/">进制转换</a></li>
+		<li><a href="/convert/ox2str/">16进制到文本字符串</a></li>
+		<li><a href="/convert/uplowercase/" id="uplowercase">字母大小写转换</a></li>
+		<li><a href="/convert/rgbhex/" id="rgbhex">RGB颜色和HEX互转</a></li>
+		<li><a href="/convert/file2pdf/" id="file2pdf">在线文档转PDF</a></li>
+		<li><a href="/convert/qrcode/" id="qrtools">二维码生成与解码</a></li>
+		<li><a href="/convert/numtohz/" id="numtohz">数字转中文(人民币)</a></li>
+		<li><a href="/convert/filesize/" id="filesizehs">在线文件大小换算</a></li>
+		<li><a href="/convert/nativeascii/" id="navasc">NATIVE/ASCII编码互转工具</a></li>
+		</ul>
+		</li>
+		<li class="dropdown">
+		<a href="#" class="dropdown-toggle" id="otherTools" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+		其他工具<span class="caret"></span></a>
+		<ul class="dropdown-menu">
+		<li><a href="/othertools/finddif/">文字对比找不同处</a></li>
+		<li><a href="/othertools/regex/">正则表达式</a></li>
+		<li><a href="/othertools/sqlAppend/">SQL追加或去除双引号</a></li>
+		<li><a href="/othertools/removeDuplicate/">去除重复字符串</a></li>
+		<li><a href="/othertools/sortwords/" id="sortWords">在线根据首字母排序</a></li>
+		</ul>
+		</li>
+		</ul>
+		</div>
+		</nav>
+		<script>
+				var showaban = true;
+
+					var storageKey = "newtools20151118";
+					if(window.localStorage.getItem(storageKey)==null){
+						$("#convertTools").after('<span class="newFeatureTip">●</span>');
+						$("#navasc").before('<span class="newItem">●</span>');
+						document.getElementById("navasc").onmouseover = function(){
+							window.localStorage.setItem(storageKey,"has");
+							$(".newFeatureTip").text('');
+						}
+
+
+					}
+
+		</script>
+		<div style="clear:both"></div>
+		<script type="text/javascript">
+			if (typeof JSON === 'undefined') {
+				document.write('<sc' + 'ript type="text/javascript" src="c/js/json2.js"></sc' + 'ript>');
+			}
+		</script>
+		<script src="./vendors/jquery-linedtextarea/jquery-linedtextarea.js" type="text/javascript"></script>
+		<link href="./vendors/jquery-linedtextarea/jquery-linedtextarea.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="static/js/inone.js"></script>
+		<!--[if IE]><link rel="stylesheet" href="static/js/c/css/blueprint/lib/ie.css" type="text/css" media="screen, projection"><![endif]-->
+		<link rel="stylesheet" href="static/css/screen.css" type="text/css" media="screen, projection">
+		<style>
+			.linedwrap {
+				width: 100%
+			}
+			.linedwrap .codelines .lineno {
+		  		font-size: 11pt;
+			}
+			#json_input {
+				padding: 0px;
+				width: 100%;
+				border-radius: 4px;
+			}
+			JSONValidate {
+				border-radius: 4px;
+			}
+			.error {
+				background: #FBE3E4;
+				color: #D12F19;
+				border-color: #FBC2C4;
+			}
+			.success {
+				background: green;
+				color: white;
+				border-color: #FBC2C4;
+			}
+			.error,
+			.notice,
+			.success {
+				margin-bottom: 1em;
+				border: 2px solid #ddd;
+				padding: .8em;
+			}
+			.hide {
+				display: none;
+			}
+			.ab{width: 284px;height: 34px;font-family: 华文细黑;color: white;font-size: 17px;line-height: 40px;margin-left: 30%;text-align: center;}
+			a{text-decoration: none;}
+			a:hover {text-decoration: none;}
+			#attention {  margin-top:10px;
+		  background-color: #fff;
+		  border: 1px solid #ddd;
+		  border-radius: 4px;
+		  -webkit-box-shadow: none;
+		  font-size: 12px;
+		  box-shadow: none;}
+		  #attention li{font-size: 12px;}
+		  .panel-footer a {color: gray;font-size: 13px;text-decoration: none;}
+		</style>
+		<script>
+		function Click(){
+		window.event.returnValue=false;
+		}
+		//document.oncontextmenu=Click;
+		</script>
+		<div class="panel panel-default">
+		<div class="panel-heading">
+		<div class="media">
+		<div class="media-body">
+			<h4 class="media-heading">BeJson</h4>
+		</div>
+		</div>
+		</div>
+		<div class="panel-body">
+		<div>
+		<div style="clear: both;"></div>
+		</div>
+		<form id="JSONValidate" method="post" action="http://www.bejson.com/." name="JSONValidate" style="margin-top: 10px;">
+		<input type="hidden" id="reformat" value="1" />
+		<input type="hidden" id="compress" value="0" />
+		<div>
+		<textarea id="json_input" name="json_input" class="json_input" style="font-size: 11px !important;" rows="32" spellcheck="false" placeholder="请输入需要检验的json字符串或URL"></textarea>
+		</div>
+		<div class="validateButtons clear">
+		<div class="left" style="float:left">
+		<div class="btn-group" role="group" aria-label="...">
+		<button name="validate" id="validate" value="Validate" class="btn btn-primary">校验</button>
+		<input name="validate" class="btn btn-danger" onclick="javascript:$('#json_input').focus(); " type="reset" value="清空" />
+		</div>
+		</div>
+
+		</div>
+		</form>
+		<div style="clear:both;"></div>
+		<pre id="results" style="display: none;"></pre>
+
+		</div>
+		<form name="alipay_form" style="padding-bottom: 0;border:none;" method="post" action="https://shenghuo.alipay.com/send/payment/fill.htm" target="_blank" accept-charset="GBK" onsubmit="document.charset='gbk';">
+		<input type="hidden" value="ij2ee@139.com" name="optEmail" />
+		<input type="hidden" value="10" name="payAmount" />
+		<input type="hidden" name="title" placeholder="付款说明" value="赞助bejson,不要修改此处哦" />
+		<input type="hidden" name="memo" placeholder="付款说明" value="老夫打赏你杯咖啡钱,拿去不谢！" />
+		</form>
+
+		</div>
+		<script>
+			showaban = false;
+			$("#validate").click(function(){
+				var jv =$("#json_input").val();
+				 var regex = /^(https?:\/\/)+[^\\s]*/i;
+		         if (jv.match(regex)) {
+		         	jQuery.ajax({
+		            type: "get",
+		            async: false,
+		            url: 'http://www.bejson.com/api/bejson/fetch.php?u='+encodeURIComponent(jv),
+		            dataType: "json",
+		            cache: false,
+		            success: function (j) {
+		               if(j.code!=1){
+		         			alert(j.msg);
+		         		}else{
+		         			$("#json_input").val(j.msg);
+		         		}
+		            },
+		            error: function (err) {
+		                alert(err);
+		            }
+		        });
+
+		         }
+			});
+		</script>
+
+		</div>
+	</div>
+</div>
+</div>
+</div>
+		<script src="static/js/bejsoncommon.js"></script>
+	</body>
+</html>

@@ -1,0 +1,23 @@
+.list-group-item a{padding-right:20px}
+#links a{font-size:13px}
+#desc1{font-size: 13px;}
+.newFeatureTip{
+    width: 13px;
+    height: 13px;
+      background-repeat: no-repeat;
+  position: absolute;
+    top: 5px;color: red;
+    right: 10px;}
+
+  .newItem{
+      float: left;
+      color: red;
+      position: absolute;
+      margin-top: 2px;
+      margin-left: 8px;
+  }
+  .announce{
+    color:red;
+  }
+
+  .nav > li:hover .dropdown-menu {display: block;}
